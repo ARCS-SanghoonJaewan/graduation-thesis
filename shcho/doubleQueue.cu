@@ -65,7 +65,7 @@ struct unused_element unused_get(){
 	return ret;
 }
 
-int contructBuf(size_t b_size, size_t p_num, size_t q_size){
+int constructBuf(size_t b_size, size_t p_num, size_t q_size){
 	cudaError_t ret;
 
 	buf_size = b_size;
