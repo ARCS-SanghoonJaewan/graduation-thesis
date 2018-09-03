@@ -1,0 +1,15 @@
+==3861== NVPROF is profiling process 3861, command: ./a 17179869184
+==3861== Profiling application: ./a 17179869184
+==3861== Profiling result:
+No kernels were profiled.
+
+==3861== API calls:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+ 99.23%  99.176ms         1  99.176ms  99.176ms  99.176ms  cudaMalloc
+  0.61%  607.26us        91  6.6730us     244ns  264.68us  cuDeviceGetAttribute
+  0.08%  84.529us         1  84.529us  84.529us  84.529us  cuDeviceTotalMem
+  0.07%  66.611us         1  66.611us  66.611us  66.611us  cuDeviceGetName
+  0.00%  4.8540us         1  4.8540us  4.8540us  4.8540us  cudaMemcpy
+  0.00%  2.5700us         3     856ns     278ns  1.8250us  cuDeviceGetCount
+  0.00%  2.0630us         3     687ns     315ns  1.1440us  cuDeviceGet
+  0.00%  1.9660us         1  1.9660us  1.9660us  1.9660us  cudaFree

@@ -1,0 +1,22 @@
+==4911== NVPROF is profiling process 4911, command: ./pathfinder 16384 16384 20
+==4911== Profiling application: ./pathfinder 16384 16384 20
+==4911== Profiling result:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+ 82.70%  149.19ms         2  74.597ms  8.3520us  149.19ms  [CUDA memcpy HtoD]
+ 17.30%  31.205ms       820  38.054us  7.8710us  43.743us  dynproc_kernel(int, int*, int*, int*, int, int, int, int)
+  0.00%  7.7760us         1  7.7760us  7.7760us  7.7760us  [CUDA memcpy DtoH]
+
+==4911== API calls:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+ 53.56%  175.81ms         3  58.604ms  25.452us  149.27ms  cudaMemcpy
+ 22.17%  72.763ms         3  24.254ms  9.7600us  71.853ms  cudaFree
+ 21.97%  72.121ms         3  24.040ms  4.9050us  70.892ms  cudaMalloc
+  1.69%  5.5631ms       820  6.7840us  6.3950us  39.933us  cudaLaunch
+  0.28%  915.65us      6560     139ns     126ns  6.1690us  cudaSetupArgument
+  0.20%  647.23us        91  7.1120us     265ns  281.93us  cuDeviceGetAttribute
+  0.08%  262.63us       820     320ns     294ns  3.0720us  cudaConfigureCall
+  0.03%  95.007us         1  95.007us  95.007us  95.007us  cuDeviceTotalMem
+  0.02%  73.480us         1  73.480us  73.480us  73.480us  cuDeviceGetName
+  0.00%  3.6260us         3  1.2080us     331ns  2.1880us  cuDeviceGetCount
+  0.00%  2.4170us         3     805ns     573ns  1.2110us  cuDeviceGet
+  0.00%  1.4800us         1  1.4800us  1.4800us  1.4800us  cudaGetDeviceCount

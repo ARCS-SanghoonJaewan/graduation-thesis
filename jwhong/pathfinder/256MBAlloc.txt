@@ -1,0 +1,22 @@
+==5304== NVPROF is profiling process 5304, command: ./pathfinder 16384 32768 20
+==5304== Profiling application: ./pathfinder 16384 32768 20
+==5304== Warning: Found 1023 invalid records in the result.
+==5304== Warning: This can happen if device ran out of memory or if a device kernel was stopped due to an assertion.
+==5304== Profiling result:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+100.00%  18.791us         1  18.791us  18.791us  18.791us  [CUDA memcpy HtoD]
+
+==5304== API calls:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+ 85.84%  71.878ms         3  23.959ms  4.7200us  69.769ms  cudaMalloc
+ 10.51%  8.8027ms      1639  5.3700us     572ns  1.6667ms  cudaLaunch
+  2.17%  1.8170ms     13112     138ns     126ns  3.3910us  cudaSetupArgument
+  0.80%  666.21us        91  7.3200us     278ns  291.51us  cuDeviceGetAttribute
+  0.42%  351.11us      1639     214ns     133ns  1.4870us  cudaConfigureCall
+  0.13%  108.66us         1  108.66us  108.66us  108.66us  cuDeviceTotalMem
+  0.08%  70.971us         1  70.971us  70.971us  70.971us  cuDeviceGetName
+  0.03%  29.300us         3  9.7660us  1.2160us  25.331us  cudaMemcpy
+  0.00%  3.1510us         3  1.0500us     397ns  2.1610us  cuDeviceGetCount
+  0.00%  1.9870us         3     662ns     392ns  1.1830us  cudaFree
+  0.00%  1.8730us         3     624ns     331ns     941ns  cuDeviceGet
+  0.00%  1.5300us         1  1.5300us  1.5300us  1.5300us  cudaGetDeviceCount

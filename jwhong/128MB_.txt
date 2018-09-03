@@ -1,0 +1,16 @@
+==3813== NVPROF is profiling process 3813, command: ./a 1073741824
+==3813== Profiling application: ./a 1073741824
+==3813== Profiling result:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+100.00%  202.76ms         1  202.76ms  202.76ms  202.76ms  [CUDA memcpy HtoD]
+
+==3813== API calls:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+ 64.10%  202.95ms         1  202.95ms  202.95ms  202.95ms  cudaMemcpy
+ 35.34%  111.88ms         1  111.88ms  111.88ms  111.88ms  cudaMalloc
+  0.28%  884.91us         1  884.91us  884.91us  884.91us  cudaFree
+  0.22%  698.59us        91  7.6760us     292ns  305.74us  cuDeviceGetAttribute
+  0.03%  110.59us         1  110.59us  110.59us  110.59us  cuDeviceTotalMem
+  0.02%  72.779us         1  72.779us  72.779us  72.779us  cuDeviceGetName
+  0.00%  3.2420us         3  1.0800us     337ns  2.3440us  cuDeviceGetCount
+  0.00%  2.2230us         3     741ns     394ns  1.1450us  cuDeviceGet

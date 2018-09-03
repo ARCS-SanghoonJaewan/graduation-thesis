@@ -1,0 +1,17 @@
+==4001== NVPROF is profiling process 4001, command: ./a 134217728
+==4001== Profiling application: ./a 134217728
+==4001== Profiling result:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+100.00%  10.554ms         1  10.554ms  10.554ms  10.554ms  [CUDA memcpy HtoD]
+
+==4001== API calls:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+ 74.66%  88.534ms         1  88.534ms  88.534ms  88.534ms  cudaMalloc
+ 15.59%  18.486ms         1  18.486ms  18.486ms  18.486ms  cudaHostRegister
+  8.93%  10.594ms         1  10.594ms  10.594ms  10.594ms  cudaMemcpy
+  0.48%  563.38us        91  6.1910us     196ns  247.82us  cuDeviceGetAttribute
+  0.22%  262.10us         1  262.10us  262.10us  262.10us  cudaFree
+  0.07%  77.232us         1  77.232us  77.232us  77.232us  cuDeviceTotalMem
+  0.05%  60.761us         1  60.761us  60.761us  60.761us  cuDeviceGetName
+  0.00%  2.4040us         3     801ns     245ns  1.7080us  cuDeviceGetCount
+  0.00%  1.5210us         3     507ns     217ns     823ns  cuDeviceGet

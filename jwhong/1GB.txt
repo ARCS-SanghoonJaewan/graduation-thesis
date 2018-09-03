@@ -1,0 +1,16 @@
+==4074== NVPROF is profiling process 4074, command: ./a 8589934592
+==4074== Profiling application: ./a 8589934592
+==4074== Profiling result:
+No kernels were profiled.
+
+==4074== API calls:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+ 90.67%  1.05051s         1  1.05051s  1.05051s  1.05051s  cudaHostRegister
+  9.26%  107.28ms         1  107.28ms  107.28ms  107.28ms  cudaMalloc
+  0.06%  662.76us        91  7.2830us     302ns  287.69us  cuDeviceGetAttribute
+  0.01%  101.75us         1  101.75us  101.75us  101.75us  cuDeviceTotalMem
+  0.01%  75.028us         1  75.028us  75.028us  75.028us  cuDeviceGetName
+  0.00%  8.3430us         1  8.3430us  8.3430us  8.3430us  cudaMemcpy
+  0.00%  7.5030us         1  7.5030us  7.5030us  7.5030us  cudaFree
+  0.00%  3.2150us         3  1.0710us     378ns  2.3430us  cuDeviceGetCount
+  0.00%  2.1330us         3     711ns     371ns  1.1100us  cuDeviceGet

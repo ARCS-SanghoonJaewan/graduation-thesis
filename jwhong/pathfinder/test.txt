@@ -1,0 +1,22 @@
+==2032== NVPROF is profiling process 2032, command: ./pathfinder 16384 16384 20
+==2032== Profiling application: ./pathfinder 16384 16384 20
+==2032== Profiling result:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+ 80.61%  146.46ms         2  73.229ms  9.3830us  146.45ms  [CUDA memcpy HtoD]
+ 19.39%  35.221ms       820  42.952us  8.8730us  50.429us  dynproc_kernel(int, int*, int*, int*, int, int, int, int)
+  0.00%  7.9160us         1  7.9160us  7.9160us  7.9160us  [CUDA memcpy DtoH]
+
+==2032== API calls:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+ 51.09%  177.37ms         3  59.123ms  25.560us  146.63ms  cudaMemcpy
+ 23.67%  82.167ms         3  27.389ms  4.9890us  80.947ms  cudaMalloc
+ 23.19%  80.524ms         3  26.841ms  11.121us  79.597ms  cudaFree
+  1.60%  5.5482ms       820  6.7660us  6.3850us  89.264us  cudaLaunch
+  0.27%  943.48us      6560     143ns     124ns  6.3540us  cudaSetupArgument
+  0.09%  324.12us        91  3.5610us     128ns  141.23us  cuDeviceGetAttribute
+  0.06%  203.63us       820     248ns     224ns  3.2600us  cudaConfigureCall
+  0.01%  49.024us         1  49.024us  49.024us  49.024us  cuDeviceTotalMem
+  0.01%  39.626us         1  39.626us  39.626us  39.626us  cuDeviceGetName
+  0.00%  1.7230us         3     574ns     127ns  1.2480us  cuDeviceGetCount
+  0.00%     990ns         3     330ns     149ns     499ns  cuDeviceGet
+  0.00%     911ns         1     911ns     911ns     911ns  cudaGetDeviceCount

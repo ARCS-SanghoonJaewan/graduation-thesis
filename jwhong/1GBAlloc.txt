@@ -1,0 +1,16 @@
+==16250== NVPROF is profiling process 16250, command: ./a 8589934592
+==16250== Profiling application: ./a 8589934592
+==16250== Profiling result:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+100.00%  1.41011s         1  1.41011s  1.41011s  1.41011s  [CUDA memcpy HtoH]
+
+==16250== API calls:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+ 51.10%  1.47488s         1  1.47488s  1.47488s  1.47488s  cudaHostAlloc
+ 48.86%  1.41013s         1  1.41013s  1.41013s  1.41013s  cudaMemcpy
+  0.03%  880.32us        91  9.6730us     315ns  381.25us  cuDeviceGetAttribute
+  0.00%  115.45us         1  115.45us  115.45us  115.45us  cuDeviceTotalMem
+  0.00%  90.959us         1  90.959us  90.959us  90.959us  cuDeviceGetName
+  0.00%  12.050us         1  12.050us  12.050us  12.050us  cudaFree
+  0.00%  3.9100us         3  1.3030us     528ns  2.3710us  cuDeviceGetCount
+  0.00%  2.8250us         3     941ns     484ns  1.5510us  cuDeviceGet

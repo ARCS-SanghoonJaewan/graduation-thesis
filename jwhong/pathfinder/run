@@ -1,0 +1,1 @@
+nvprof ./pathfinder 16384 16384 20 2> test.txt
