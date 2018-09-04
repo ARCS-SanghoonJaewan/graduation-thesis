@@ -92,7 +92,7 @@ int constructBuf(size_t b_size, size_t p_num, size_t q_size){
 		return -1;
 
 	for(size_t i = 0; i < queue_size; i++){
-		ret = cudaHostAlloc(&buf[i], buf_size, cudaHostAllocWriteCombined);
+		ret = cudaHostAlloc(&buf[i], buf_size, cudaHostAllocDefault | cudaHostAllocWriteCombined);
 		if(ret != cudaSuccess){
 			switch(ret){
 				case cudaErrorInvalidValue:
