@@ -181,7 +181,7 @@ void* producer(void* arg){
 		pthread_mutex_unlock(&used_mutex);
 		sem_post(&used_empty);
 
-		memcpy(target_buf, src + target_index * buf_size; buf_size);
+		memcpy(target_buf, src + target_index * buf_size, buf_size);
 
 		sem_wait(&unused_empty);
 		pthread_mutex_lock(&unused_mutex);

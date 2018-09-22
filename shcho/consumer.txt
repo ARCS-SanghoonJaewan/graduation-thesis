@@ -1,0 +1,22 @@
+for(i = 0; i < #_of_data_copy; i++){
+
+	// Step 3 start
+	semaphore_wait(unused_queue_full)
+	lock(unused_queue_lock)
+	target_buffer, target_index = get_from_unused_queue()
+	unlock(unused_queue_lock)
+	semaphore_post(unused_queue_empty)
+	memcpy(device_dst + target_index * buffer_size, 
+		target_buffer, 
+		buffer_size)
+	// Step 3 end
+	
+	// Step 4 start
+	semaphore_wait(used_queue_empty)
+	lock(used_queue_lock)
+	put_in_used_queue(target_buffer)
+	unlock(used_queue_lock)
+	semaphore_post(used_queue_full)
+	// Step 4 end
+	
+}
